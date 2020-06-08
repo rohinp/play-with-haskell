@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2912a527454953715d24375d2af0e731a84d25049b1f81a98288056526f41d4b
+-- hash: 05577957bfa9a6cd396833ec1145a9b09e14bb18ca0a13b1d7f199e818f12920
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , safe >=0.3.17
   default-language: Haskell2010
 
 executable play-with-haskell-exe
@@ -42,10 +43,11 @@ executable play-with-haskell-exe
       Paths_play_with_haskell
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
       base >=4.7 && <5
     , play-with-haskell
+    , safe >=0.3.17
   default-language: Haskell2010
 
 test-suite play-with-haskell-test
@@ -59,4 +61,5 @@ test-suite play-with-haskell-test
   build-depends:
       base >=4.7 && <5
     , play-with-haskell
+    , safe >=0.3.17
   default-language: Haskell2010
