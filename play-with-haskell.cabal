@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 05577957bfa9a6cd396833ec1145a9b09e14bb18ca0a13b1d7f199e818f12920
+-- hash: 43b3e66792384e2be5373143c9f8d2e879ac94732e129334ea8534aa855b9e69
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -43,7 +43,7 @@ executable play-with-haskell-exe
       Paths_play_with_haskell
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , play-with-haskell

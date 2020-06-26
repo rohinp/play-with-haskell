@@ -4,6 +4,17 @@ import Lib
 
 main :: IO ()
 main = putStrLn $ show $ (rotate 3 "ABCDEFG")
+
+myFilter :: String -> [String]
+myFilter xs = [ w | w <- words xs, not $ elem w ["the", "a", "an"]  ]
+
+
+myZip :: [a] -> [b] -> [(a,b)]
+myZip [] _ = []
+myZip _ [] = []
+myZip (x:xs) (y:ys) = (x,y) : myZip xs ys
+
+
 {-
 data Trivial =
   Trivial'
