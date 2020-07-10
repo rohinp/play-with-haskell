@@ -23,6 +23,7 @@ dependencies:
 - base >= 4.7 && < 5
 - safe >= 0.3.17
 - hspec>= 2.7.1
+- time >= 1.8.0.2
 
 library:
   source-dirs: src
