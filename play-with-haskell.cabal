@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bb09b4795710ea745a9d6a33f236cef61f10697e8a56a0b50b197d232e3799ac
+-- hash: 71263dc005ce52c218814f8e12b28b99a0b19b7e207f42ab4129ad54cc0012cd
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      Chapter12
       Chapter9
       Lib
   other-modules:
