@@ -143,4 +143,39 @@ module Chapter12 where
  eitherMaybe'' :: (b -> c) -> Either a b -> Maybe c
  eitherMaybe'' f = either' (\_ -> Nothing) (\b -> Just $ f b )
 
+ -- unfolds
+ myIterate :: (a -> a) -> a -> [a]
+ myIterate f a = f a : myIterate f (f a)
+
+ myUnfoldr :: (b -> Maybe (a, b)) -> b -> [a]
+ myUnfoldr f b = call $ f b
+    where
+        call Nothing = []
+        call (Just (a , b)) = a : myUnfoldr f b 
+
+ betterIterate :: (a -> a) -> a -> [a]
+ betterIterate f a = myUnfoldr (lift f) a 
+    where 
+        lift :: (a -> a) -> (a -> Maybe(a,a))
+        lift f = \x -> Just (x, f x)
+
+-- Something other then list
+
+ data BinaryTree a = 
+     Leaf
+     | Node (BinaryTree a) a (BinaryTree a) 
+     deriving (Eq, Ord, Show)
+
+ unfold :: (a -> Maybe (a,b,a)) -> a -> BinaryTree b
+ unfold f a = call $ f a
+    where 
+        call Nothing = Leaf
+        call (Just (a1,b,a2)) = Node (unfold f a1) b (unfold f a2)
+
+ treeBuild :: Integer -> BinaryTree Integer
+ treeBuild n = unfold f 0
+    where
+        f a  
+            | a == n = Nothing
+            | otherwise = Just (a+1, a , a+1)
  
