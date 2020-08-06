@@ -24,6 +24,8 @@ dependencies:
 - safe >= 0.3.17
 - hspec>= 2.7.1
 - time >= 1.8.0.2
+- QuickCheck >=2.13.2
+- containers >=0.6.0.1
 
 library:
   source-dirs: src

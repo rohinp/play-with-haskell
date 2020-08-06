@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5eaa7ad799fbca74893339013c0bcea3611c130d4b50bc3fe455d6c13beecd8b
+-- hash: 8ca57c8de9cd4ba03a848c173e206523c361c9e5c8e49b10107392b30b9e5682
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -27,16 +27,20 @@ source-repository head
 
 library
   exposed-modules:
-      Chapter12
+      Addition
       Chapter10
+      Chapter12
       Chapter9
       Lib
+      Morse
   other-modules:
       Paths_play_with_haskell
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      QuickCheck >=2.13.2
+    , base >=4.7 && <5
+    , containers >=0.6.0.1
     , hspec >=2.7.1
     , safe >=0.3.17
     , time >=1.8.0.2
@@ -50,7 +54,9 @@ executable play-with-haskell-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck >=2.13.2
+    , base >=4.7 && <5
+    , containers >=0.6.0.1
     , hspec >=2.7.1
     , play-with-haskell
     , safe >=0.3.17
@@ -61,14 +67,18 @@ test-suite play-with-haskell-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      AdditionSpec
       Chapter9Spec
       MySpec
+      WordNumberSpec
       Paths_play_with_haskell
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck >=2.13.2
+    , base >=4.7 && <5
+    , containers >=0.6.0.1
     , hspec >=2.7.1
     , play-with-haskell
     , safe >=0.3.17

@@ -176,6 +176,6 @@ module Chapter12 where
  treeBuild n = unfold f 0
     where
         f a  
-            | a == n = Nothing
+            | a >= n = Nothing
             | otherwise = Just (a+1, a , a+1)
  
