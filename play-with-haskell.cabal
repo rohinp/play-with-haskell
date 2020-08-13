@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8ca57c8de9cd4ba03a848c173e206523c361c9e5c8e49b10107392b30b9e5682
+-- hash: f6a009ae1de6b0cf2688853b8d590e62c54b9b56ad091089eda122f9b6ccca4f
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -30,6 +30,8 @@ library
       Addition
       Chapter10
       Chapter12
+      Chapter15
+      Chapter15Monoid
       Chapter9
       Lib
       Morse
@@ -68,6 +70,8 @@ test-suite play-with-haskell-test
   main-is: Spec.hs
   other-modules:
       AdditionSpec
+      Chapter15MonoidSpec
+      Chapter15Spec
       Chapter9Spec
       MySpec
       WordNumberSpec
