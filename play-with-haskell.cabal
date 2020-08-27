@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 07803597f774a46f8cc6cfafeb40b40e3a5e792a9fe7b9c574a1080713c29388
+-- hash: a625e9a1b2c6851f07f8c0636e29b2364307d058f2de26a55f15c6b2ac506d1c
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -33,6 +33,7 @@ library
       Chapter15
       Chapter15Monoid
       Chapter16
+      Chapter17
       Chapter9
       Lib
       Morse
@@ -43,6 +44,7 @@ library
   build-depends:
       QuickCheck >=2.13.2
     , base >=4.7 && <5
+    , checkers >=0.5.2
     , containers >=0.6.0.1
     , hspec >=2.7.1
     , safe >=0.3.17
@@ -59,6 +61,7 @@ executable play-with-haskell-exe
   build-depends:
       QuickCheck >=2.13.2
     , base >=4.7 && <5
+    , checkers >=0.5.2
     , containers >=0.6.0.1
     , hspec >=2.7.1
     , play-with-haskell
@@ -74,6 +77,7 @@ test-suite play-with-haskell-test
       Chapter15MonoidSpec
       Chapter15Spec
       Chapter16Spec
+      Chapter17Spec
       Chapter9Spec
       MySpec
       WordNumberSpec
@@ -84,6 +88,7 @@ test-suite play-with-haskell-test
   build-depends:
       QuickCheck >=2.13.2
     , base >=4.7 && <5
+    , checkers >=0.5.2
     , containers >=0.6.0.1
     , hspec >=2.7.1
     , play-with-haskell
