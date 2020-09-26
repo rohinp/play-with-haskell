@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a625e9a1b2c6851f07f8c0636e29b2364307d058f2de26a55f15c6b2ac506d1c
+-- hash: 865298d3818983dd774e87b3a761f109e992178e2407a818c2ef962cce0c9c16
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -34,6 +34,8 @@ library
       Chapter15Monoid
       Chapter16
       Chapter17
+      Chapter18
+      Chapter20
       Chapter9
       Lib
       Morse
