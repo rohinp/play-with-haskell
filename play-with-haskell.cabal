@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 865298d3818983dd774e87b3a761f109e992178e2407a818c2ef962cce0c9c16
+-- hash: 86696ede8c61f41752519830d734dd3a62c34b10ab257545aae23568b27e357e
 
 name:           play-with-haskell
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Addition
+      AddressBook
       Chapter10
       Chapter12
       Chapter15
@@ -36,6 +37,8 @@ library
       Chapter17
       Chapter18
       Chapter20
+      Chapter21
+      Chapter22
       Chapter9
       Lib
       Morse

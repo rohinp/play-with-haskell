@@ -82,3 +82,5 @@ filterF pr = foldMap f
     where
         f a | pr a = pure a  
             | otherwise = mempty
+
+
